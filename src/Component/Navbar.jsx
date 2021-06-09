@@ -6,15 +6,20 @@ import Avatar from "../assets/avatar.png"
 import "../styles.css";
 import {AiOutlineSearch} from "react-icons/ai"
 import {IoIosNotifications} from "react-icons/io"
+import {withRouter, Link} from 'react-router-dom'
 
 class CustomNavbar extends Component {
   render() {
     return (
+      
       <Navbar collapseOnSelect expand="lg">
         {/* <Container > */}
+        <Link to='/'>
         <Navbar.Brand>
+
           <img src={NetflixLogo} id="logo" />
         </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -47,4 +52,4 @@ class CustomNavbar extends Component {
   }
 }
 
-export default CustomNavbar;
+export default withRouter(CustomNavbar);
